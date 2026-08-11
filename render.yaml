@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: bda-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --worker-class eventlet -w 1 app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET_KEY
+        sync: false
+      - key: FLASK_ENV
+        value: production
+      - key: FRONTEND_URL
+        sync: false
