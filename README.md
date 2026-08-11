@@ -301,4 +301,3 @@ MIT License — free for academic and commercial use.
 
 ---
 
-*Built for Final-Year Big Data Analytics Project — 2024*
